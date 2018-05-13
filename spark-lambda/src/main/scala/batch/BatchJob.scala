@@ -1,0 +1,5 @@
+package batch
+
+object BatchJob {
+
+}
