@@ -10,9 +10,19 @@ object BatchJob {
     val conf = new SparkConf()
     conf.setMaster("local").setAppName("Lambda with Spark")
 
+
+
+
+
     val sc = new SparkContext(conf)
 
-    println(sc)
+
+    val sourceFile = "/Users/matthewgerstemeier/vagrant.virtual.machines/spark-kafka-cassandra-applying-lambda-architecture/vagrant/data.tsv"
+    val input = sc.textFile(sourceFile)
+
+    input.foreach(println)
+
+
   }
 
 }
